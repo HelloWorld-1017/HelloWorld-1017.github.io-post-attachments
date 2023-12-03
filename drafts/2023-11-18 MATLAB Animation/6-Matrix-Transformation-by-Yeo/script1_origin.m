@@ -3,15 +3,15 @@ clc,clear,close all
 contestAnimator()
 
 function contestAnimator()
-animFilename = 'animation.gif'; % Output file name
+animFilename = "animation.gif";
 firstFrame = true;
 framesPerSecond = 24;
 delayTime = 1/framesPerSecond;
-% Create the gif
+
 for frame = 1:48
     drawframe(frame)
     fig = gcf();
-    fig.Units = 'pixels';
+    fig.Units = "pixels";
     fig.Position(3:4) = [300,300];
     im = getframe(fig);
     [A,map] = rgb2ind(im.cdata,256);
@@ -26,7 +26,7 @@ end
 
 function drawframe(f)
 cla
-mtx2apply = [0, 1; 1, 0];
+mtx2apply = [2,1;1,2];
 vu = ones(2, 9) * 4;
 vu(1,:) = -4:4;
 vd = ones(2, 9) * (-4);
