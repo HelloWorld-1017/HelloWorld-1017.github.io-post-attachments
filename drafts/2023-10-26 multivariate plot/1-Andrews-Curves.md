@@ -528,8 +528,8 @@ Gnanadesikan’s book, *Methods for Statistical Data Analysis of Multivariate Ob
 **References**
 
 [^1]: [Andrews plot - Wikipedia](https://en.wikipedia.org/wiki/Andrews_plot).
-[^2]: Andrews, David F. "Plots of high-dimensional data." *Biometrics* (1972): 125-136, available at: [Plots of High-Dimensional Data on JSTOR](https://www.jstor.org/stable/2528964).
-[^3]: [MATLAB `andrewsplot`: Andrews plot - MathWorks China](https://ww2.mathworks.cn/help/stats/andrewsplot.html).
+[^2]: Andrews, David F, "Plots of high-dimensional data," *Biometrics* (1972): 125-136, available at: [Plots of High-Dimensional Data on JSTOR](https://www.jstor.org/stable/2528964).
+[^3]: [MATLAB `andrewsplot`: Andrews plot - MathWorks](https://ww2.mathworks.cn/help/stats/andrewsplot.html).
 [^4]: Gnanadesikan, Ram. *Methods for statistical data analysis of multivariate observations*. John Wiley & Sons, 2011, **page 240-244**, available at: [Methods for Statistical Data Analysis of Multivariate Observations](http://ndl.ethernet.edu.et/bitstream/123456789/33247/1/R.%20Gnanadesikan_1997.pdf).
 [^5]: [Geometric and Algebraic Definition of Dot Product (Inner Product) - What a starry night~](https://helloworld-1017.github.io/2022-06-09/21-07-09.html).
 
