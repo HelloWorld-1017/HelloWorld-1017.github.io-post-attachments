@@ -1,8 +1,3 @@
-The following code is used to train and test a CNN for a digits (0-9) classification task (the network structure is referred to official example [^1]):
-
-<div id="script-1"></div>
-
-```matlab
 clc,clear,close all
 
 % For reproducibility
@@ -71,45 +66,3 @@ nexttile
 cm = confusionchart(YTest,predictions);
 cm.DiagonalColor = [0,0,1];
 cm.OffDiagonalColor = [1,0,0];
-```
-
-![image-20240210215354852](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202402102153941.png)
-
-Where the lines:
-
-```matlab
-% For reproducibility
-rng("default")
-gpurng("default")
-```
-
-is to ensure other users could reproduce the same results when running [this script](#script-1). However, recently I found that 
-
-![image-20240211003029864](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202402110030057.png)
-
-![image-20240211003311482](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202402110033962.png)
-
-（这是`nets.mat`的三种net的前三组数据）
-
-
-
-
-
-
-
-<br>
-
-**References**
-
-[^1]: [Resume Training from Checkpoint Network - MATLAB & Simulink - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/resume-training-from-a-checkpoint-network.html).
-
-
-
-
-
-[1] [reproduce neural network with random seed for deep learning - MATLAB Answers - MATLAB Central](https://ww2.mathworks.cn/matlabcentral/answers/466694-reproduce-neural-network-with-random-seed-for-deep-learning).
-
-[2] [Specify Training Options in Custom Training Loop - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/specify-training-options-in-custom-training-loop.html).
-
-[3] [Train Network Using Custom Training Loop - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/train-network-using-custom-training-loop.html).
-
