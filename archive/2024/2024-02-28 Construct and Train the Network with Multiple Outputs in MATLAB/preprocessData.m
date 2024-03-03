@@ -11,4 +11,12 @@ T2 = cat(2,dataT2{:});
 
 % One-hot encode labels
 T1 = onehotencode(T1,1);
+
+% size(X),size(T1),size(T2)
+% ans =
+%     28    28     1   128
+% ans =
+%     10   128
+% ans =
+%      1   128
 end
