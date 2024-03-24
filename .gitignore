@@ -18,3 +18,9 @@ slprj
 *.aux
 *.log
 *.gz
+
+# Ignore LaTeX automatically generated files
+*.nav
+*.out
+*.snm
+*.toc
