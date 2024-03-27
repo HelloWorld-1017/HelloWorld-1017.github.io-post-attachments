@@ -1,3 +1,8 @@
+‎2024‎-02-22 ‏‎21:33:30 +0800
+
+
+
+```matlab
 clc,clear,close all
 rng("default")
 
@@ -69,4 +74,23 @@ options = trainingOptions('adam', ...
 
 % Train the network
 net = trainNetwork(XTrain,YTrain,layers,options);
+```
+
+
+
+
+
+<br>
+
+**References**
+
+[Train Convolutional Neural Network for Regression - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/train-a-convolutional-neural-network-for-regression.html).
+
+[Sequence-to-Sequence Regression Using Deep Learning - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/sequence-to-sequence-regression-using-deep-learning.html).
+
+[MATLAB `trainNetwork`: (Not recommended) Train neural network - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/trainnetwork.html).
+
+[Define Custom Regression Output Layer - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/define-custom-regression-output-layer.html).
+
+
 

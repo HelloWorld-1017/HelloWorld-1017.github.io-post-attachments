@@ -7,8 +7,6 @@ y_hat = rand(3,7);
 y = dlarray(y,"CB");
 y_hat = dlarray(y_hat,"CB");
 
-size(y,1)
+mae(y_hat,y)
 
-disp( mse(y_hat,y) )
-disp( sum( (y_hat-y).^2,"all" )/size(y,1)/2 )
-
+% disp( sum( abs(y_hat-y),"all" )/size(y,1)/size(y,2) )
