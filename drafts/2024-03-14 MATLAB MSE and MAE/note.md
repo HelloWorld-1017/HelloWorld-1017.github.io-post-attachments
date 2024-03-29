@@ -1,5 +1,4 @@
 ---
-
 Calculate Mean Squared Error (MSE) and xxx(MAE) in MATLAB
 draft_at: 2024-03-15 17:16:45 +0800
 date:
@@ -9,69 +8,43 @@ last_modified_at:
 
 # Mean Squared Error (MSE) and Mean Absolute Error (MAE)
 
-## MSE
+As described in Wikipedia[^1], **Mean Squared Error (MSE)** of an estimator is **the average squared difference between the estimated values and the actual values.** MSE is a measure of the quality of an estimator, and is derived from the squared Euclidean distance.
 
-As described in Wikipedia[^1], 
+In machine learning, specifically empirical risk minimization, MSE may refer to the *empirical risk* (the average loss *on an observed data set*), as an estimate of the true MSE (the *true risk*: the average loss on the *actual population distribution*)[^1].
+{: .notice--primary}
 
-
-
-
+For $N$ true value vectors (observations) $S=\{\boldsymbol{Y}_1,\boldsymbol{Y}_2,\cdots,\boldsymbol{Y}_N\}$ and $N$ corresponding estimated vectors (predictions) $S^* = \{\hat{\boldsymbol{Y}}_1,\hat{\boldsymbol{Y}}_2,\cdots,\hat{\boldsymbol{Y}}_N\}$ ($\boldsymbol{Y},\hat{\boldsymbol{Y}}\in\mathbb{R}^K$), MSE is calculated as:
 $$
-\text{MSE}=\dfrac1N\sum_{i=1}^N(\hat{y}_i-y_i)^2
+\text{MSE}=\dfrac1N\sum_{i=1}^N
+(\boldsymbol{Y}_i-\hat{\boldsymbol{Y}}_i)^T
+(\boldsymbol{Y}_i-\hat{\boldsymbol{Y}}_i)\label{eq1}
 $$
-
-
-
-
-
-
-
-
-
-### For vector
-
-According to most common definition[^1], for $M$-dimensional vectors, Mean Squared Error (MSE) can be calculated as:
+or:
 $$
-\text{MSE}=\dfrac1N\sum_{i=1}^N(\hat{\boldsymbol{y}}_i-\boldsymbol{y}_i)^T(\hat{\boldsymbol{y}}_i-\boldsymbol{y}_i)\label{eq1}
+\text{MSE}=\dfrac1N\sum_{i=1}^N
+\vert\vert\boldsymbol{Y}_i-\hat{\boldsymbol{Y}}_i\vert\vert_2^2
 $$
-where
-
-- $N$ is total number of observations, and $i$ is the sample index.
-- $\boldsymbol{y}$ is the vector of true values (targets), and $\hat{\boldsymbol{y}}$ is the corresponding prediction vector. Both $\boldsymbol{y}_i$ and $\hat{\boldsymbol{y}}_i$ are $M\times1$ vectors, i.e., $M$ is the total number of responses of each observation.
-
-Definitely, Eq. $\eqref{eq1}$ can be rewritten as the pointwise form:
+or in the pointwise form:
 $$
 \text{MSE}=\dfrac1N\sum_{i=1}^N\sum_{j=1}^K(\hat{y}_{ij}-y_{ij})^2\label{eq2}
 $$
-where $j$ is the response index.
-
-## MAE
-
-For $M$-dimensional vectors, Mean Absolute Error (MAE)[^6][^7]
-
-
-
-can be expressed in a concise form using $L_1$ norm
-
-
-
-
-
-
-
-
-
-
+**Mean Absolute Error (MAE)** is another measure of an estimator[^6], and is the **the average absolute difference between the estimated values and the actual values.** MAE can be expressed in a concise form using $L_1$ norm[^7]:
 $$
-\text{MAE}=\dfrac1N\sum_{i=1}^N\vert\vert\hat{\boldsymbol{y}}_i-\boldsymbol{y}_i\vert\vert_1
+\text{MAE}=\dfrac1N\sum_{i=1}^N
+\vert\vert\boldsymbol{Y}_i-\hat{\boldsymbol{Y}}_i\vert\vert_1
 $$
 
+or in the pointwise form:
 $$
-\text{MAE}=\dfrac1N\sum_{i=1}^N\sum_{j=1}^M\abs{\hat{y}_{ij}-y_{ij}}
+\text{MAE}=\dfrac1N\sum_{i=1}^N\sum_{j=1}^K\abs{y_{ij}-\hat{y}_{ij}}
 $$
-## Discussions
+For two true vectors and estimated vectors in two-dimensional Euclidean space, i.e. $N=2$ and $\boldsymbol{Y},\hat{\boldsymbol{Y}}\in\mathbb{R}^2$, MSE and MAE can be geometrically explained as follows:
 
-not identical (equivalent)
+<img src="https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202403281424318.png" style="zoom: 50%;" />
+
+
+
+
 
 
 
@@ -338,7 +311,7 @@ Seemingly there is no something like half MAE
 **References**
 
 [^1]: [Mean squared error - Wikipedia](https://en.wikipedia.org/wiki/Mean_squared_error).
-[^2]: [MATLAB Deep Learning Toolbox > unction Approximation and Nonlinear Regression > `mse`: Mean squared normalized error performance function - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/mse.html).
+[^2]: [MATLAB Deep Learning Toolbox > Function Approximation and Nonlinear Regression > `mse`: Mean squared normalized error performance function - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/mse.html).
 [^3]: [MATLAB Deep Learning Toolbox > custom Training Loops > `mse`: Half mean squared error - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/dlarray.mse.html).
 [^4]: [Mean Squared Error (MSE) formula for data points in higher dimensions - Cross Validated](https://stats.stackexchange.com/questions/612727/mean-squared-error-mse-formula-for-data-points-in-higher-dimensions).
 [^5]: [Array Size of MATLAB `dlarray` - What a starry night~](https://helloworld-1017.github.io/2024-03-25/19-29-31.html).
@@ -346,11 +319,7 @@ Seemingly there is no something like half MAE
 [^7]: Qi, Jun, et al. "On mean absolute error for deep neural network based vector-to-vector regression." *IEEE Signal Processing Letters* 27 (2020): 1485-1489, available at: [[2008.07281] On Mean Absolute Error for Deep Neural Network Based Vector-to-Vector Regression](https://arxiv.org/abs/2008.07281).
 [^8]: [MATLAB Deep Learning Toolbox `mae`: Mean absolute error performance function - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ref/mae.html).
 
-
-
 [3] [Define Custom Regression Output Layer - MathWorks](https://ww2.mathworks.cn/help/deeplearning/ug/define-custom-regression-output-layer.html).
-
-
 
 
 
