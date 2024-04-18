@@ -1,0 +1,6 @@
+figure("Color","w","Position",[359,348,654,522])
+hold(gca,"on"),box(gca,"on"),grid(gca,"on")
+plot(T2,SP500.Data(:,2),"Color","b")
+xtickformat("yyyy")
+xlabel("Date")
+ylabel("S&P 500 Index")
