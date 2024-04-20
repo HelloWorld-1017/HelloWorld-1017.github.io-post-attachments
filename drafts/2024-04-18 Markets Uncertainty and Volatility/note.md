@@ -68,7 +68,11 @@ interactive and editable graphs to showing
 
 # Chicago Board of Options Exchange Volatility Index
 
-Chicago Board of Options Exchange Volatility Index (CBOE Volatility Index, or VIX)[^6][^7]
+Chicago Board of Options Exchange Volatility Index (CBOE Volatility Index, or VIX)[^6][^7],
+
+
+
+
 
 
 
@@ -97,4 +101,6 @@ Chicago Board of Options Exchange Volatility Index (CBOE Volatility Index, or VI
 [^7]: [CBOE Volatility Index (VIX): What Does It Measure in Investing?](https://www.investopedia.com/terms/v/vix.asp).
 
 
+
+[MATLAB `corr`: Linear or rank correlation - MathWorks](https://ww2.mathworks.cn/help/stats/corr.html).
 
