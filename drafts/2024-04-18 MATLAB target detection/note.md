@@ -18,6 +18,3 @@ last_modified_at:
 [1] [Object Detection Using YOLO v3 Deep Learning - MathWorks](https://ww2.mathworks.cn/help/vision/ug/object-detection-using-yolo-v3-deep-learning.html).
 
 [2] 
-
-
-

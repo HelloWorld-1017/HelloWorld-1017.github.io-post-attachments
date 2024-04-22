@@ -1,6 +1,6 @@
 ---
 layout: single
-title:
+title: 
 categories:
  - MATLAB
 tags:
@@ -214,61 +214,25 @@ It frequently appears in the workflow of MATLAB deep learning related to images.
 
 <br>
 
-# MATLAB `medicalImage` function
+# Something else ......
 
-As a note in the `montage` documentation:
-
-*"Medical Imaging Toolbox™ extends the functionality of the `montage` (Image Processing Toolbox™) function to display data from a `medicalImage`[^4] (Medical Imaging Toolbox) or `medicalVolume`[^5] (Medical Imaging Toolbox) object. For more information, see `montage`[^6] (Medical Imaging Toolbox)."*
-
-
-
-
-
-
-
-
-
-`medicalImage`[^4]: available since R2022b
-
-`medicalVolume`[^5]: available since R2022b
-
-`montage`[^6]: available since R2023a
-
-<br>
-
-# Montage
-
-Previously, in my mind, the word "montage" is something just about art, so when I first saw this function, I felt this function name is vivid and may be a little romantic. But today I look up the on-line Longman dictionary[^7], and found that it's seemingly like the word "collection" or "set", but "montage" highlights that the elements (pictures, film, or music) are combined (or rather, organized) in an interesting and unusual way:
+Previously, in my mind, the word "montage" is something just about art, so when I first saw this function in MATLAB, I felt its name is vivid and may be a little romantic. But today I look up the on-line Longman dictionary[^4], and find that it’s probably not an exclusive noun for art, and may resemble the word "collection" or "set", but "montage" highlights that the elements (pictures, film, or music) are combined (or rather, organized) in an interesting and unusual way:
 
 ![image-20240419044633720](https://raw.githubusercontent.com/HelloWorld-1017/blog-images/main/imgs/202404190446866.png)
 
-
-
-
-
-
-
-
-
-
-
-Having said that, I still watch something about montage, which is about art.
-
-
-
-
-
-YouTube channel "CineFix - IGN Movies and TV" has 
-
-"Top 10 Best Montages of All Time"
-
-
-
-
-
-
+Not so serious. Having said that, I still watch some on-line contents, which introduce montage from the point of view of art, like the video, "Top 10 Best Montages of All Time", from YouTube channel "CineFix - IGN Movies and TV"[^5]: 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DhQHlCaSR_w?si=XeM-Yeh4JTQGQbgy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ <br>
+
+As a comparison, a long dialog scenes in “Before Sunset” 
+
+
+
+[Are the long takes in 'Before Sunset' mostly green screen? : r/movies](https://www.reddit.com/r/movies/comments/asjlap/are_the_long_takes_in_before_sunset_mostly_green/)
+
+[Richard Linklater's Before Sunset- Filmmaker Magazine - Spring 2004](https://filmmakermagazine.com/archives/issues/spring2004/features/paris_day.php)
 
 
 
@@ -279,10 +243,9 @@ YouTube channel "CineFix - IGN Movies and TV" has
 [^1]: [MATLAB `montage`: Display multiple image frames as rectangular montage - MathWorks](https://ww2.mathworks.cn/help/images/ref/montage.html).
 [^2]: [MATLAB `imageDatastore`: Datastore for image data - MathWorks](https://ww2.mathworks.cn/help/matlab/ref/matlab.io.datastore.imagedatastore.html).
 [^3]: [Object Detection Using YOLO v3 Deep Learning - MathWorks](https://ww2.mathworks.cn/help/vision/ug/object-detection-using-yolo-v3-deep-learning.html).
-[^4]: [MATLAB `medicalImage`: 2-D medical image pixel data and file metadata - MathWorks](https://ww2.mathworks.cn/help/medical-imaging/ref/medicalimage.html).
-[^5]: [MATLAB `medicalVolume`: 3-D medical image voxel data and spatial referencing information - MathWorks](https://ww2.mathworks.cn/help/medical-imaging/ref/medicalvolume.html).
-[^6]: [MATLAB `montage`: Display medical image slices or frames as montage in patient coordinates - MathWorks](https://ww2.mathworks.cn/help/medical-imaging/ref/medicalimage.montage.html).
-[^7]: [montage \| meaning of montage in Longman Dictionary of Contemporary English \| LDOCE](https://www.ldoceonline.com/dictionary/montage).
+[^4]: [montage \| meaning of montage in Longman Dictionary of Contemporary English \| LDOCE](https://www.ldoceonline.com/dictionary/montage).
+
+[^5]: [Top 10 Best Montages of All Time - YouTube](https://www.youtube.com/watch?v=DhQHlCaSR_w).
 
 
 
@@ -291,8 +254,6 @@ YouTube channel "CineFix - IGN Movies and TV" has
 
 
 
-
-[Top 10 Best Montages of All Time - YouTube](https://www.youtube.com/watch?v=DhQHlCaSR_w).
 
 
 
