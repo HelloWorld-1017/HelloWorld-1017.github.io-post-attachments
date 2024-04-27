@@ -1,24 +1,27 @@
 ---
 layout: single
-title: 
+title: MATLAB `montage` Function
 categories:
  - MATLAB
+ - Machin Learning
 tags:
  - MATLAB Image Processing and Computer Vision
  - MATLAB Image Processing Toolbox
  - MATLAB Data Import and Analysis
  - Medical Imaging Toolbox
 drafted_at: 2024-04-19 01:34:06 +0800
-date:
+date: 
 last_modified_at0:
 last_modified_at:
 ---
 
 # MATLAB `montage` function
 
+MATLAB `montage` function is to "display multiple image frames as rectangular montage"[^1]. 
 
 
-<br>
+
+
 
 ## Create montage from multi-frame image (3-D array)
 
@@ -226,13 +229,27 @@ Not so serious. Having said that, I still watch some on-line contents, which int
 
  <br>
 
+
+
+
+
+
+
+It's flashes of brilliance it fracturing space-time reality and narrative for the sake of abstract. 
+
+divide up the categories by what kind of different things can montages do. And one of the obvious answers is that they can chop a big story up and tell  it very very fast.
+
+some montages managed to just be incredibly efficient methods of joke delivery.
+
+compress time, making gradual change seem far more dramatic, training montage
+
+take a half dozen different storylines and wave them together
+
+reveal hidden similarities and differences by virtue of some good old compare and contrast (Edge of Tomorrow)
+
+
+
 As a comparison, a long dialog scenes in “Before Sunset” 
-
-
-
-[Are the long takes in 'Before Sunset' mostly green screen? : r/movies](https://www.reddit.com/r/movies/comments/asjlap/are_the_long_takes_in_before_sunset_mostly_green/)
-
-[Richard Linklater's Before Sunset- Filmmaker Magazine - Spring 2004](https://filmmakermagazine.com/archives/issues/spring2004/features/paris_day.php)
 
 
 
@@ -246,42 +263,11 @@ As a comparison, a long dialog scenes in “Before Sunset”
 [^4]: [montage \| meaning of montage in Longman Dictionary of Contemporary English \| LDOCE](https://www.ldoceonline.com/dictionary/montage).
 
 [^5]: [Top 10 Best Montages of All Time - YouTube](https://www.youtube.com/watch?v=DhQHlCaSR_w).
+[^6]: [Edge of Tomorrow - Wikipedia](https://en.wikipedia.org/wiki/Edge_of_Tomorrow).
+[^7]: [Before Sunset - Wikipedia](https://en.wikipedia.org/wiki/Before_Sunset).
 
+[Are the long takes in 'Before Sunset' mostly green screen? : r/movies](https://www.reddit.com/r/movies/comments/asjlap/are_the_long_takes_in_before_sunset_mostly_green/).
 
+[Richard Linklater's Before Sunset- Filmmaker Magazine - Spring 2004](https://filmmakermagazine.com/archives/issues/spring2004/features/paris_day.php).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Long take - Wikipedia](https://en.wikipedia.org/wiki/Long_take)

@@ -14,9 +14,9 @@ last_modified_at0:
 last_modified_at:
 ---
 
+<br>
 
-
-Recently I've been reading Morgan Housel's[^1] book *The Psychology of Money: Timeless lessons on wealth, greed, and happiness*[^2]. In the fifteenth chapter "Nothing's Free: Everything has a price, but not all prices appear on labels", Housel believes that investors should view market volatility and uncertainty as a "fee" (a price worth paying to get something nice in exchange) rather than a "fine" (a penalty should avoid). A relatively complete part of his views shows as follows:
+These days I've been reading Morgan Housel's[^1] book *The Psychology of Money: Timeless lessons on wealth, greed, and happiness*[^2]. In the fifteenth chapter "Nothing's Free: Everything has a price, but not all prices appear on labels", Housel believes that investors should view market volatility and uncertainty as a "fee" (a price worth paying to get something nice in exchange) rather than a "fine" (a penalty should avoid). A relatively complete part of his views shows as follows:
 
 <br>
 
@@ -42,9 +42,9 @@ Find the price, then pay it.
 
 <br>
 
-Anyway, it's really a novel perspective and I am convinced. I have a new understanding about market volatility and uncertainty.
+Anyway, it's really a novel perspective. I am convinced, and have a new understanding about market volatility and uncertainty.
 
-On the other hand, Few days ago, when I wrote the blog "Fetch S&P 500 Price Index (or Other Available Series) from FRED (Federal Reserve Economic Data) Server in MATLAB"[^3], I found an FRED blog by chance, "Measuring uncertainty and volatility with FRED data"[^4]. In this blog, the author points out the nuance between the notions of market "uncertainty" and "volatility":
+On the other hand, few days ago, when I wrote the blog "Fetch S&P 500 Price Index (or Other Available Series) from FRED (Federal Reserve Economic Data) Server in MATLAB"[^3], I found an FRED blog by chance, "Measuring uncertainty and volatility with FRED data"[^4]. In this blog, the author contends that uncertainty and volatility are different notions, and points out the nuance between the them, saying:
 
 <br>
 
@@ -56,33 +56,51 @@ FRED has a number of series that are related to uncertainty and/or volatility, s
 
 <br>
 
-However, I am really confused, because as the blog pointed out, market volatility is a kind of **ex post** measure of market uncertainty; on the other hand, the blog takes CBOE Volatility Index, which is for predicting one-month-ahead 
+However, I am really confused, because as the blog pointed out, market volatility is a kind of **ex post** measure of market uncertainty; on the other hand, the blog takes CBOE Volatility Index, which is an ex ante index for predicting one-month-ahead volatility, to illustrate his ideas. This seems contradictory. 
 
-
-
-ex-ante
-
-
-
-interactive and editable graphs to showing
+So, I try to find other on-line references talking about them, especially for volatility, because I feel that the "uncertainty" is actually an unobservable quantity, and "volatility" is the estimation for it (==this point will be explained more detailed at the end of the blog==). So, the following text will 
 
 <br>
 
 # Volatility (finance)
 
-As described in Wikipedia[^9], In finance, **volatility** (usually denoted by "$\sigma$") is the degree of variation of a trading price series over time, usually measured by the standard deviation of logarithmic returns. Implied volatility looks forward in time, being derived from the market price of a market-traded derivative (in particular, an option).
+At the beginning of the Wikipedia webpage about "Volatility (finance)"[^9], it first introduce the notion of "volatility" and "implied volatility": 
 
-Volatility as described here refers to the actual volatility, more specifically:
+<br>
+
+In finance, **volatility** (usually denoted by "$\sigma$​​") is the degree of variation of a trading price series over time, usually <u>measured by the standard deviation of logarithmic returns</u>. **Implied volatility** looks forward in time, being derived from the market price of a market-traded derivative (in particular, an option). 
+
+<br>
+
+Subsequently, it points out "volatility" described here refer to "actual volatility", which differs from "implied volatility". Then it lists more detailed notions about them according to time horizon:
+
+<br>
+
+For actual volatility:
 
 - **Actual current volatility** of a financial instrument for a specified period (for example 30 days or 90 days), based on historical prices over the specified period with the last observation the most recent price.
 - **Actual historical volatility**: the volatility of a financial instrument over a specified period but with the last observation on a date in the past. [near synonymous is **realized volatility**, the square root of the realized variance, in turn calculated using the sum of squared returns divided by the number of observations.]
 - **Actual future volatility**: the volatility of a financial instrument over a specified period starting at the current time and ending at a future date (normally the expiry date of an option).
 
-For implied volatility
+For implied volatility:
 
-- **historical implied volatility**: the implied volatility observed from historical prices of the financial instrument (normally options).
-- **current implied volatility**: the implied volatility observed from current prices of the financial instrument.
-- **future implied volatility**: the implied volatility observed from future prices of the financial instrument.
+- **Historical implied volatility**: the implied volatility observed from historical prices of the financial instrument (normally options).
+- **Current implied volatility**: the implied volatility observed from current prices of the financial instrument.
+- **Future implied volatility**: the implied volatility observed from future prices of the financial instrument.
+
+<br>
+
+This kind of categorization is rather detailed and professional, but 
+
+
+
+
+
+
+
+
+
+[Difference between Implied, Realized and Historical Volatility - Macroption](https://www.macroption.com/implied-vs-realized-vs-historical-volatility/)
 
 
 
@@ -91,6 +109,14 @@ For implied volatility
 ==there are many measures (or indexes) to indicate the volatility==
 
 
+
+interactive and editable graphs to showing
+
+
+
+==Volfefe index, Interesting!!!==
+
+[Volfefe index - Wikipedia](https://en.wikipedia.org/wiki/Volfefe_index)
 
 
 
@@ -104,12 +130,6 @@ Chicago Board of Options Exchange Volatility Index (CBOE Volatility Index, or VI
 
 
 
-
-
-
-
-
-
 <br>
 
 # Other expressions
@@ -118,11 +138,11 @@ Chicago Board of Options Exchange Volatility Index (CBOE Volatility Index, or VI
 
 
 
-
-
-
-
 # Conclusion
+
+We can find some analogues for both notions and their relations in other fields out of finance. In my research area, Electrical Engineering, or more specifically the area of studying partial discharge[^10] of electrical insulation systems, "real discharge magnitude" is a real existence but never can't be measured exactly. The only thing researchers can do is to estimate, or say to approximate, the real discharge magnitude, and the estimated discharge magnitude is also called "apparent discharge magnitude". Apparent discharge magnitude is actually affected by the measurement system, and different methods will result in different measured values, although the real discharge magnitude keeps consistent for those measurement systems.
+
+<br>
 
 There so many players in the markets participating in the game, and the "future (expected) price" is more common. So, it is possible to obtain a future price in the market. This is very different from my research area, electrical engineering, more like something like hard science.
 
@@ -140,6 +160,18 @@ There so many players in the markets participating in the game, and the "future 
 
 [^8]: [VIX 18.71 (▲3.94%) VIX指数 \| Google 财经](https://www.google.com/finance/quote/VIX:INDEXCBOE).
 [^9]: [Volatility (finance) - Wikipedia](https://en.wikipedia.org/wiki/Volatility_(finance))
+
+[^10]: [Partial discharge - Wikipedia](https://en.wikipedia.org/wiki/Partial_discharge).
+
+
+
+
+
+
+
+
+
+
 
 
 
