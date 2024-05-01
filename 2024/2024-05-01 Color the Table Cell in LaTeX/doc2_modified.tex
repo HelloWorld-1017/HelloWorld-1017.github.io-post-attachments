@@ -1,0 +1,51 @@
+\documentclass[english,british,10pt,journal,compsoc]{IEEEtran}
+\usepackage{amsmath}
+\usepackage{babel}
+\usepackage{colortbl}
+
+\newcommand\celln{ }
+\newcommand\cellp{\cellcolor[rgb]{0.8510, 0.9176, 0.8275}}
+\newcommand\cellz{\cellcolor[rgb]{0.7882, 0.8549, 0.9725}}
+
+\makeatletter
+\@ifundefined{showcaptionsetup}{}{\PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+% Self-defined environment `ScriptFont`
+\newenvironment{ScriptFont}{\scriptsize}{\normalsize}
+
+\begin{document}
+	\begin{table*}
+		\setlength\tabcolsep{2pt}
+		\hspace*{\fill}
+		\begin{ScriptFont}
+			\begin{tabular}{ccccccccccccccccccccccc}
+				& aero & bicycle & bird & boat & bottle & bus & car & cat & chair & cow & table & dog & horse & mbike & person & plant & sheep & sofa & train & tv & \quad{} & mean \tabularnewline
+				\hline 
+				LM-LLDA \texttt{Dense} & 33.7 & 61.3 & 12.4 & 18.5 & 26.7 & 53.0 & 57.2 & 22.4 & 22.7 & 25.6 & 25.1 & 14.0 & 59.2 & 51.0 & 39.1 & 13.6 & 21.7 & 38.0 & 48.8 & 44.0 & & 34.4 \tabularnewline
+				\hline 
+				\texttt{Bing} & \celln-7.5 & \celln-23.2 & \celln-6.2 & \celln-8.1 & \celln-10.6 & \celln-13.3 & \celln-17.5 & \celln-6.8 & \celln-9.8 & \celln-15.4 & \celln-7.5 & \cellz-1.4 & \celln-19.6 & \celln-19.0 &\celln-16.1 & \celln-3.4 & \celln-6.6 & \celln-18.1 & \celln-18.8 & \celln-10.0 & & \celln-11.9 \tabularnewline
+				\texttt{CPMC} & \cellz-1.0 & \celln-15.0 & \cellz-0.2 & \celln-4.4 & \celln-13.5 & \cellz-1.8 & \celln-9.2 & \cellp3.2 & \celln-9.1 & \celln-2.6 & \cellp5.1 & \cellp2.2 & \celln-4.2 & \celln-4.8 & \celln-7.0 & \cellz-2.0 & \celln-2.6 & \cellz1.2 & \celln-4.1 & \celln-4.9 & & \celln-3.7 \tabularnewline
+				\texttt{\textbf{EdgeBoxes}} & \cellz-2.0 & \celln-6.1 & \cellz-0.7 & \celln-3.8 & \celln\textbf{-6.7} & \cellz\textbf{0.6} & \celln\textbf{-5.8} & \cellz-1.1 & \cellz\textbf{-2.0} & \cellz-1.8 & \celln-4.6 & \cellz0.4 & \cellz-1.3 & \cellz\textbf{-1.3} & \celln-3.0 & \cellz-1.7 & \cellz\textbf{-0.1} & \cellz-0.9 & \cellz-0.2 & \cellz-1.1 & & \celln\textbf{-2.2} \tabularnewline
+				\texttt{Endres} & \cellz-1.5 & \celln\textbf{-5.8} & \cellz-0.6 & \celln-4.8 & \celln-12.7 & \cellz-1.1 & \celln-7.1 & \cellp3.4 & \celln-6.9 & \celln-3.2 & \cellp4.7 & \cellz1.9 & \celln-2.4 & \celln-2.4 & \celln-7.7 & \celln-2.8 & \cellz-1.9 & \cellz1.5 & \cellz0.4 & \celln-4.2 & & \celln-2.7 \tabularnewline
+				\texttt{\textbf{Geodesic}} & \cellz-1.9 & \celln-8.1 & \cellz-0.2 & \celln-4.6 & \celln-14.4 & \cellz0.6 & \celln-6.5 & \cellp2.6 & \celln-7.3 & \cellz\textbf{-1.3} & \cellp4.7 & \cellp2.4 & \celln-2.5 & \celln-2.7 & \celln-4.7 & \cellz-1.2 & \cellz-0.7 & \cellz-0.1 & \cellz\textbf{1.9} & \cellz0.2 & & \celln\textbf{-2.2} \tabularnewline
+				\texttt{\textbf{MCG}} & \cellz-0.7 & \celln-7.2 &\cellz0.1 & \celln-3.6 & \celln\textbf{-6.7} & \cellz-1.2 & \celln-7.0 & \cellp3.4 & \celln-3.2 & \celln-2.3 & \cellp5.0 & \cellz1.9 & \celln-3.5 & \cellz\textbf{-1.3} & \cellz\textbf{-1.5} & \cellz\textbf{-1.1} & \cellz-1.3 & \cellp2.2 & \cellz0.3 & \cellz\textbf{0.5} & & \cellz\textbf{-1.4} \tabularnewline
+				\texttt{Objectness} & \celln-10.3 & \celln-15.1 & \cellz-2.0 & \celln-6.2 & \celln-11.0 & \celln-9.5 & \celln-13.0 & \celln-3.6 & \celln-10.0 & \celln-6.4 & \celln-7.8 & \cellz-1.0 & \celln-11.6 & \celln-15.9 & \celln-13.0 & \celln-2.7 & \celln-5.8 & \celln-11.2 & \celln-10.9 & \celln-12.9 & & \celln-9.0 \tabularnewline
+				\texttt{Rahtu} & \cellz-0.3 & \celln-13.2 & \cellz-0.3 & \cellz\textbf{-1.2} & \celln-13.0 & \cellz-0.6 & \celln-12.0 & \cellp3.3 & \celln-10.5 & \celln-4.3 & \cellp2.0 & \cellp2.1 & \celln-3.2 & \celln-4.9 & \celln-7.9 & \celln-2.8 & \celln-4.9 & \celln-5.0 & \cellz0.0 & \celln-3.7 & & \celln-4.0 \tabularnewline
+				\texttt{Rand.Prim} & \cellp\textbf{2.1} & \celln-10.4 & \cellz-0.5 & \celln-4.5 & \celln-13.2 & \cellz-1.9 & \celln-10.1 & \cellp5.0 & \celln-6.7 & \celln-3.5 & \cellp2.0 & \cellp2.4 & \celln-4.4 & \celln-5.1 & \celln-10.0 & \celln-2.3 & \cellz-1.8 & \cellz1.2 & \celln-3.8 & \celln-4.4 & & \celln-3.5 \tabularnewline
+				\texttt{Rantalankila} & \cellz0.5 & \celln-13.6 & \cellz0.3 & \celln-3.0 & \celln-12.9 & \celln-3.6 & \celln-9.0 & \cellp4.4 & \celln-5.6 & \celln-3.7 & \cellp4.1 & \cellp2.5 & \celln-2.2 & \celln-4.0 & \celln-7.8 & \celln-2.5 & \celln-3.8 & \cellp\textbf{2.1} & \cellz-1.5 & \cellz-0.7 & & \celln-3.0 \tabularnewline
+				\texttt{\textbf{Rigor}} & \cellz1.7 & \celln-7.9 & \cellz0.5 & \celln-4.1 & \celln-12.4 & \cellz-0.8 & \celln-9.0 & \cellp\textbf{6.3} & \celln-6.9 & \cellz-1.7 & \cellz1.8 & \cellp\textbf{2.9} & \cellz\textbf{-0.9} & \celln-3.3 & \celln-7.7 & \cellz-1.8 & \cellz-1.3 & \cellz1.6 & \cellz-1.2 & \cellz-1.7 & & \celln\textbf{-2.3} \tabularnewline
+				\texttt{\textbf{SelectiveSearch}} & \cellz1.3 & \celln-7.7 & \cellz\textbf{1.0} & \celln-4.3 & \celln-11.1 & \cellz-1.7 & \celln-7.8 & \cellp3.9 & \celln-4.8 & \cellz-1.5 & \cellp\textbf{5.4} & \cellp2.2 & \cellz-1.4 & \celln-3.8 & \celln-6.0 & \cellz-1.5 & \cellz-0.8 & \cellz0.6 & \celln-2.4 & \celln-2.1 & & \celln\textbf{-2.1} \tabularnewline	
+				\hline 
+				\texttt{Gaussian} & \celln-6.6 & \celln-13.4 & \cellz-0.7 & \celln-4.4 & \celln-15.0 & \celln-6.1 & \celln-16.0 & \cellz0.9 & \celln-9.1 & \celln-8.0 & \cellz0.3 & \cellz1.2 & \celln-4.2 & \celln-6.9 & \celln-10.3 & \celln-2.3 & \celln-6.5 & \celln-4.5 & \celln-3.6 & \celln-12.1 & & \celln\emph{-6.4} \tabularnewline
+				\texttt{SlidingWindow} & \celln-21.8 & \celln-20.7 & \celln-3.2 & \celln-8.1 & \celln-16.6 & \celln-14.7 & \celln-22.1 & \cellz-0.7 & \celln-9.8 & \celln-11.7 & \celln-10.2 & \cellz-1.4 & \celln-14.7 & \celln-20.1 & \celln-14.8 & \celln-3.8 & \celln-7.7 & \celln-21.0 & \celln-20.8 & \celln-14.8 & & \celln-12.9 \tabularnewline
+				\texttt{Superpixels} & \celln-23.9 & \celln-52.2 & \celln-3.1 & \celln-9.4 & \celln-17.4 & \celln-43.9 & \celln-42.3 & \celln-10.2 & \celln-11.3 & \celln-12.6 & \celln-15.8 & \celln-8.5 & \celln-50.1 & \celln-41.7 & \celln-30.9 & \celln-4.4 & \celln-10.6 & \celln-25.2 & \celln-39.7 & \celln-8.2 & & \celln-23.1 \tabularnewline
+				\texttt{Uniform} & \celln-3.2 & \celln-18.8 & \celln-4.0 & \celln-4.8 & \celln-15.2 & \celln-8.6 & \celln-16.6 & \cellz0.2 & \celln-10.4 & \celln-8.8 & \cellp3.7 & \cellz1.3 & \celln-6.6 & \celln-11.3 & \celln-10.2 & \celln-3.6 & \celln-8.9 & \celln-5.8 & \celln-5.1 & \celln-20.2 & & \celln-7.8 \tabularnewline
+				\hline 
+				Top methods avg. & \cellz-0.3 & \celln-7.4 & \cellz0.1 & \celln-4.1 & \celln-10.2 & \cellz-0.5 & \celln-7.2 & \cellp3.0 & \celln-4.8 & \cellz-1.7 & \cellp2.5 & \cellp2.0 & \cellz-1.9 & \celln-2.5 & \celln-4.6 & \cellz-1.5 & \cellz-0.8 & \cellz0.7 & \cellz-0.3 & \cellz-0.8 & & \cellz-2.0 \tabularnewline
+			\end{tabular}\hspace*{\fill}
+		\end{ScriptFont}
+		\protect\caption{\label{tab:pascal-llda-dpm-per-class}LM-LLDA detection results on PASCAL 2007 (with bounding box regression). The top row indicates the average precision (AP) of LM-LLDA alone, while the other rows show the difference in AP when adding proposal methods. Green indicates improvement of at least $2\,\mbox{AP}$, blue indicates minor change ($-2\le\text{AP}<2$), and white indicates a decrease by more than $2\,\mbox{AP}$. \texttt{Edge\-Boxes} achieves top results on 6 of the 20 categories; \texttt{MCG} performs best overall with -1.4 mAP loss.}
+	\end{table*}
+\end{document}
