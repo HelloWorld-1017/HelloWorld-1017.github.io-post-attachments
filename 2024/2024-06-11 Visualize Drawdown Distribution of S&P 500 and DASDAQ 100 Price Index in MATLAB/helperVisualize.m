@@ -19,6 +19,7 @@ daysOfToday2PreviousHighest = (daysOfToday2PreviousHighest-1);
 daysOfToday2PreviousHighest(daysOfToday2PreviousHighest==0) = [];
 [ecdff2,ecdfx2] = ecdf(daysOfToday2PreviousHighest);
 dateList = 0.2:0.1:1;
+fprintf("Statistical characteristics of maximum drawdown duration:\n")
 for i = 1:numel(dateList)
     idx = find(ecdff2 >= dateList(i));
     idx = idx(1);
