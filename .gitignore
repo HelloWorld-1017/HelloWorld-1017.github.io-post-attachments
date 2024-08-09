@@ -1,16 +1,18 @@
-# Ignore figure files
+# Ignore animation and video files
 *.gif
 *.avi
 
-# Ignore Visual Studio compile files
+# Ignore Visual Studio compilation files
 .vscode
 
-# Ignore PyCharm compile files
+# Ignore PyCharm compilation files
 __pycache__
 .idea
+
+# Ignore Jupyter Notebook compilation files
 .ipynb_checkpoints
 
-# Ignore MATLAB simulation compile files
+# Ignore MATLAB simulation compilation files
 slprj
 *.slxc
 
