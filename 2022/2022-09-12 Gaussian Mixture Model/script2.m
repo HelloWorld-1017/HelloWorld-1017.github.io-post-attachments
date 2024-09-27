@@ -10,8 +10,7 @@ title('Fisher''s Iris Data Set');
 xlabel('Sepal length (cm)');
 ylabel('Sepal width (cm)');
 
-
-rng(3);
+rng("default");
 % Specify number of GMM components
 k = 3; 
 % Specify maximum iterations for EM algorith
@@ -37,7 +36,7 @@ X0 = [x1grid(:) x2grid(:)];
 % with degrees of freedom 2, evaluated at the probability values in 0.99.
 threshold = sqrt(chi2inv(0.99, 2));
 
-figure('Units', 'pixels', 'Position', [585, 307, 1120, 793])
+figure('Units', 'pixels', 'Position', [585, 307, 1120, 793], 'Color', 'w')
 count = 1;
 for i = 1:nSigma
     for j = 1:nSC
@@ -63,7 +62,9 @@ for i = 1:nSigma
     end
 end
 
-figure('Units', 'pixels', 'Position', [585, 307, 1120, 793])
+exportgraphics(gcf, "fig.jpg", "Resolution", 900)
+
+figure('Units', 'pixels', 'Position', [585, 307, 1120, 793], 'Color', 'w')
 % For the first GMM, assign most data points to the first cluster
 initialCond1 = [ones(n-8, 1); [2; 2; 2; 2]; [3; 3; 3; 3]]; 
 % For the second GMM, randomly assign data points to clusters
@@ -103,3 +104,5 @@ for j = 1:4
     converged(j) = gmfit.Converged; % Indicator for convergence
 end
 sum(converged)
+
+exportgraphics(gcf, "fig1.jpg", "Resolution", 900)

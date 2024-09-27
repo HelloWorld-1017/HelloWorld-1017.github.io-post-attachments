@@ -1,3 +1,6 @@
+# Ignore image files
+*.jpg
+
 # Ignore animation and video files
 *.gif
 *.avi
